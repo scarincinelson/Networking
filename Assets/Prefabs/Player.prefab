@@ -512,6 +512,7 @@ GameObject:
   - component: {fileID: 3808051308300451546}
   - component: {fileID: 8506570000585974181}
   - component: {fileID: 5797753501317328592}
+  - component: {fileID: 4326000707416338060}
   - component: {fileID: 2469988543864814079}
   m_Layer: 0
   m_Name: Player
@@ -646,6 +647,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   ShowTopMostFoldoutHeaderGroup: 1
+--- !u!114 &4326000707416338060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9096382581717617839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44da4361ea9e83f47a435bd8b8c59e0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NetworkPlayerConfig
+  ShowTopMostFoldoutHeaderGroup: 1
+  _playerInput: {fileID: 2469988543864814079}
+  _camera: {fileID: 1110795462412246030}
 --- !u!114 &2469988543864814079
 MonoBehaviour:
   m_ObjectHideFlags: 0
