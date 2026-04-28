@@ -7,15 +7,12 @@ public class PlayerController : NetworkBehaviour
     private CharacterController _characterController;
     private Vector2 _input;
     private float _speed = 5f;
-    private PlayerInput _playerInput;
     private float _yVelocity;
     private float _gravity = -9.81f;
 
     private void Awake()
     {
         _characterController = GetComponent<CharacterController>();
-        _playerInput = GetComponent<PlayerInput>();
-        _playerInput.enabled = false;
     }
 
     private void Start()
@@ -75,16 +72,6 @@ public class PlayerController : NetworkBehaviour
     private void MoveCharacter(Vector3 moveDirection)
     {
         _characterController.Move(moveDirection * _speed * Time.deltaTime);
-    }
-
-    public override void OnNetworkSpawn()
-    {
-        _playerInput.enabled = IsOwner;
-    }
-
-    public override void OnNetworkDespawn()
-    {
-        _playerInput.enabled = false;
     }
 
     public void OnMove(InputValue value)

@@ -6,7 +6,7 @@ public class NetworkPlayerConfig : NetworkBehaviour
 {
     [SerializeField] private PlayerInput _playerInput;
     [SerializeField] private GameObject _camera;
-
+    
     private void Awake()
     {
         //PlayerInput
