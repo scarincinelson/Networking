@@ -21,7 +21,7 @@ public class Coin : Item
         Debug.Log($"Picked: {_itemName}");
     }
 
-    [Rpc(SendTo.Server)]
+    [Rpc(SendTo.Server, InvokePermission = RpcInvokePermission.Everyone)]
     private void PickUpServerRpc()
     {
         NetworkObject.Despawn(true);
