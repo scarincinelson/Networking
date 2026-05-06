@@ -4,8 +4,6 @@ using UnityEngine.InputSystem;
 
 public class ServerController : MonoBehaviour
 {
-
-
     void Update()
     {
         if (Keyboard.current.hKey.wasPressedThisFrame)
