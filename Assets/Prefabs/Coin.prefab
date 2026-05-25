@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 8025891698888003117}
   - component: {fileID: 4659203426394209482}
   - component: {fileID: 4141782222673040690}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 2954648227
+  GlobalObjectIdHash: 1475359010
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1

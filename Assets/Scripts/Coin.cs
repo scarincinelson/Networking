@@ -12,7 +12,8 @@ public class Coin : Item
     {
         if (IsServer)
         {
-            NetworkObject.Despawn();
+            gameObject.SetActive(false);
+            NetworkObject.Despawn(false);
         }
         else
         {
@@ -24,6 +25,7 @@ public class Coin : Item
     [Rpc(SendTo.Server, InvokePermission = RpcInvokePermission.Everyone)]
     private void PickUpServerRpc()
     {
-        NetworkObject.Despawn(true);
+        gameObject.SetActive(false);
+        NetworkObject.Despawn(false);
     }
 }
