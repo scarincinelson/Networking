@@ -10,22 +10,20 @@ public class Coin : Item
 
     public override void PickUp()
     {
-        if (IsServer)
-        {
-            gameObject.SetActive(false);
-            NetworkObject.Despawn(false);
-        }
-        else
-        {
-            PickUpServerRpc();
-        }
+        PickUpServerRpc();
+
         Debug.Log($"Picked: {_itemName}");
     }
 
     [Rpc(SendTo.Server, InvokePermission = RpcInvokePermission.Everyone)]
     private void PickUpServerRpc()
     {
-        gameObject.SetActive(false);
         NetworkObject.Despawn(false);
+    }
+
+    public override void OnNetworkDespawn()
+    {
+        gameObject.SetActive(false);
+        base.OnNetworkDespawn();
     }
 }
